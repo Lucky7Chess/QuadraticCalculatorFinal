@@ -1,15 +1,13 @@
 package theteendevs.quadraticcalculatorfinal;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import theteendevs.newquadraticcalculator.R;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -66,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
                 }
                 if ((number22 * number22) - (4 * number11 * number33)<0) {
                     real1 = (-number22/ (2 * number11));
-                    float answer1=(float)Math.sqrt(-((number22*number22 - (4 * number11 * number33))/2*number11));
+                    float answer1=(float)Math.sqrt(-((number22*number22) - (4 * number11 * number33)))/(2*number11);
                     output31 = Float.toString(answer1);
                     editText4.setText(real1+"+"+output31+" i");
                     editText5.setText(real1+"-"+output31+" i");
@@ -103,9 +101,6 @@ public class MainActivity extends ActionBarActivity {
 
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
